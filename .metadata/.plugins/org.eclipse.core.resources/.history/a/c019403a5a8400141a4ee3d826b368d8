@@ -5,7 +5,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Random;
 
-//TEST
 public class DataGenerator {
 	public static void main(String[] args) {
 		DataGenerator dg = new DataGenerator();
