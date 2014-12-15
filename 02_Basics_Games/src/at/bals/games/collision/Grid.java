@@ -1,7 +1,5 @@
 package at.bals.games.collision;
 
-import java.awt.Color;
-
 import at.bals.games.nemo.Tree;
 import ch.aplu.jgamegrid.Actor;
 import ch.aplu.jgamegrid.GGActorCollisionListener;

@@ -8,10 +8,6 @@ import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
 
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
-
-import at.bals.games.testgames.FirstGame;
-
 public class MyGame extends BasicGame {
 	private ArrayList<BulletActor> actorList;
 	private FallActor fa;

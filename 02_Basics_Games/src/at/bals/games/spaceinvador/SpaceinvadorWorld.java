@@ -2,12 +2,8 @@ package at.bals.games.spaceinvador;
 
 import java.awt.Point;
 
-import at.bals.games.nemo.Nemo;
-import at.bals.games.nemo.Tree;
 import ch.aplu.jgamegrid.GameGrid;
 import ch.aplu.jgamegrid.Location;
-
-import java.awt.event.KeyEvent;
 
 public class SpaceinvadorWorld extends GameGrid {
 

@@ -2,8 +2,6 @@ package at.bals.games.trees;
 
 import java.awt.Color;
 
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-
 import ch.aplu.jgamegrid.GameGrid;
 import ch.aplu.jgamegrid.Location;
 

@@ -3,25 +3,20 @@ package at.bals.swing.calculator;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
-
 import java.awt.Font;
-
-import javax.swing.JTextField;
-import javax.swing.JComboBox;
-import javax.swing.JButton;
-
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 import java.awt.GridLayout;
-import java.util.Currency;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
 
 public class MainCalculator extends JFrame {
 
@@ -93,7 +88,8 @@ public class MainCalculator extends JFrame {
 		inAndOutput.add(lblOutput);
 
 		comboBox = new JComboBox();
-		comboBox.setModel(new DefaultComboBoxModel(new String[] { "(choose)", Converter.DOLLAR, Converter.FRANCS }));
+		comboBox.setModel(new DefaultComboBoxModel(new String[] { "(choose)",
+				Converter.DOLLAR, Converter.FRANCS }));
 		content.add(comboBox, BorderLayout.CENTER);
 
 		JButton button = new JButton("converte");

@@ -1,7 +1,6 @@
 package at.ran.games.testgame;
 
 import org.newdawn.slick.geom.Circle;
-import org.newdawn.slick.geom.Rectangle;
 import org.newdawn.slick.geom.Shape;
 
 public class Ball {

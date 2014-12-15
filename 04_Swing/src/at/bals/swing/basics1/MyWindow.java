@@ -1,7 +1,6 @@
 package at.bals.swing.basics1;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;

@@ -2,7 +2,11 @@ package at.bals.games.fourInARow;
 
 import java.awt.Color;
 import java.awt.Font;
-import ch.aplu.jgamegrid.*;
+
+import ch.aplu.jgamegrid.GGMouse;
+import ch.aplu.jgamegrid.GGMouseListener;
+import ch.aplu.jgamegrid.GameGrid;
+import ch.aplu.jgamegrid.Location;
 
 public class FourInARow1 extends GameGrid implements GGMouseListener
 {

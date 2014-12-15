@@ -1,9 +1,7 @@
 package at.bals.games.spaceinvador;
 
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 
-import at.bals.games.nemo.Tree;
 import ch.aplu.jgamegrid.Actor;
 import ch.aplu.jgamegrid.GGKeyListener;
 

@@ -2,25 +2,16 @@ package at.bals.swing.chat;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.BoxLayout;
-
-import java.awt.GridLayout;
-import java.awt.FlowLayout;
-
-import javax.swing.JLabel;
-
 import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-import javax.swing.JTextField;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTextArea;
-
-import org.omg.CORBA.PUBLIC_MEMBER;
-import java.awt.event.KeyAdapter;
+import javax.swing.border.EmptyBorder;
 
 public class MainChat extends JFrame {
 
