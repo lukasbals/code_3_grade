@@ -40,24 +40,19 @@ public class MyGame extends BasicGame {
 		MoveStrategy msU2 = new MoveStrategyUp(400, 600);
 		MoveStrategy msS = new MoveStrategySinus(0, 400);
 
-		CarActor ca = new CarActor();
-		ca.setMoveStrategy(msD1);
+		CarActor ca = new CarActor(msD1);
 		this.actors.add(ca);
 
-		ca = new CarActor();
-		ca.setMoveStrategy(msU1);
+		ca = new CarActor(msU1);
 		this.actors.add(ca);
 		
-		ca = new CarActor();
-		ca.setMoveStrategy(msD2);
+		ca = new CarActor(msD2);
 		this.actors.add(ca);
 		
-		ca = new CarActor();
-		ca.setMoveStrategy(msU2);
+		ca = new CarActor(msU2);
 		this.actors.add(ca);
 		
-		ca = new CarActor();
-		ca.setMoveStrategy(msS);
+		ca = new CarActor(msS);
 		this.actors.add(ca);
 	}
 
