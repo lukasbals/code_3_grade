@@ -12,6 +12,7 @@ import org.newdawn.slick.SlickException;
 import at.bals.games.platterns.strategy.MoveStrategy;
 import at.bals.games.platterns.strategy.MoveStrategyDown;
 import at.bals.games.platterns.strategy.MoveStrategySinus;
+import at.bals.games.platterns.strategy.MoveStrategyStraight;
 import at.bals.games.platterns.strategy.MoveStrategyUp;
 
 public class MyGame extends BasicGame {
@@ -38,22 +39,34 @@ public class MyGame extends BasicGame {
 		MoveStrategy msU1 = new MoveStrategyUp(0, 600);
 		MoveStrategy msD2 = new MoveStrategyDown(400, 0);
 		MoveStrategy msU2 = new MoveStrategyUp(400, 600);
-		MoveStrategy msS = new MoveStrategySinus(0, 400);
+		MoveStrategy msS1 = new MoveStrategySinus(0, 100);
 
 		CarActor ca = new CarActor(msD1);
 		this.actors.add(ca);
 
 		ca = new CarActor(msU1);
 		this.actors.add(ca);
-		
+
 		ca = new CarActor(msD2);
 		this.actors.add(ca);
-		
+
 		ca = new CarActor(msU2);
 		this.actors.add(ca);
-		
-		ca = new CarActor(msS);
+
+		ca = new CarActor(msS1);
 		this.actors.add(ca);
+
+		MoveStrategy msS2 = new MoveStrategySinus(100, 150);
+
+		TruckActor ta = new TruckActor(msS2);
+		this.actors.add(ta);
+
+		MoveStrategy msSt1 = new MoveStrategyStraight(50, 50);
+
+		PlaneActor pa = new PlaneActor(msSt1);
+		this.actors.add(pa);
+		
+		this.actors.add(new DisplayActor());
 	}
 
 	@Override

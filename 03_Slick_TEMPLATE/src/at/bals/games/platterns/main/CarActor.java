@@ -6,7 +6,7 @@ import org.newdawn.slick.SlickException;
 
 import at.bals.games.platterns.strategy.MoveStrategy;
 
-public class CarActor extends AActor{
+public class CarActor extends AActor {
 	private Image image;
 
 	public CarActor(MoveStrategy moveStrategy) throws SlickException {

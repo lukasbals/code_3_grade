@@ -6,12 +6,12 @@ import org.newdawn.slick.SlickException;
 
 import at.bals.games.platterns.strategy.MoveStrategy;
 
-public class TruckActor extends AActor {
+public class PlaneActor extends AActor{
 	private Image image;
 
-	public TruckActor(MoveStrategy moveStrategy) throws SlickException {
+	public PlaneActor(MoveStrategy moveStrategy) throws SlickException {
 		super(moveStrategy);
-		this.image = new Image("testdata/truck.png");
+		this.image = new Image("testdata/plane.png");
 	}
 
 	public void paint(Graphics g) {
