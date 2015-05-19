@@ -9,6 +9,11 @@ import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
 
+import at.bals.games.platterns.strategy.MoveStrategy;
+import at.bals.games.platterns.strategy.MoveStrategyDown;
+import at.bals.games.platterns.strategy.MoveStrategySinus;
+import at.bals.games.platterns.strategy.MoveStrategyUp;
+
 public class MyGame extends BasicGame {
 	private List<Actor> actors;
 
@@ -22,16 +27,38 @@ public class MyGame extends BasicGame {
 		for (Actor a : actors) {
 			a.paint(g);
 		}
-		
+
 	}
 
 	@Override
 	public void init(GameContainer gc) throws SlickException {
 		this.actors = new ArrayList<Actor>();
-		for (int i = 0; i < 10; i++) {
-			this.actors.add(new CarActor());
-			this.actors.add(new TruckActor());
-		}
+
+		MoveStrategy msD1 = new MoveStrategyDown(0, 0);
+		MoveStrategy msU1 = new MoveStrategyUp(0, 600);
+		MoveStrategy msD2 = new MoveStrategyDown(400, 0);
+		MoveStrategy msU2 = new MoveStrategyUp(400, 600);
+		MoveStrategy msS = new MoveStrategySinus(0, 400);
+
+		CarActor ca = new CarActor();
+		ca.setMoveStrategy(msD1);
+		this.actors.add(ca);
+
+		ca = new CarActor();
+		ca.setMoveStrategy(msU1);
+		this.actors.add(ca);
+		
+		ca = new CarActor();
+		ca.setMoveStrategy(msD2);
+		this.actors.add(ca);
+		
+		ca = new CarActor();
+		ca.setMoveStrategy(msU2);
+		this.actors.add(ca);
+		
+		ca = new CarActor();
+		ca.setMoveStrategy(msS);
+		this.actors.add(ca);
 	}
 
 	@Override
@@ -40,7 +67,7 @@ public class MyGame extends BasicGame {
 		for (Actor a : actors) {
 			a.move(delta);
 		}
-		
+
 	}
 
 	public static void main(String[] args) {
