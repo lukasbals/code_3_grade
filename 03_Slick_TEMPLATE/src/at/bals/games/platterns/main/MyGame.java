@@ -35,25 +35,25 @@ public class MyGame extends BasicGame {
 	public void init(GameContainer gc) throws SlickException {
 		this.actors = new ArrayList<Actor>();
 
-		MoveStrategy msD1 = new MoveStrategyDown(0, 0);
-		MoveStrategy msU1 = new MoveStrategyUp(0, 600);
-		MoveStrategy msD2 = new MoveStrategyDown(400, 0);
-		MoveStrategy msU2 = new MoveStrategyUp(400, 600);
+		// MoveStrategy msD1 = new MoveStrategyDown(0, 0);
+		// MoveStrategy msU1 = new MoveStrategyUp(0, 600);
+		// MoveStrategy msD2 = new MoveStrategyDown(400, 0);
+		// MoveStrategy msU2 = new MoveStrategyUp(400, 600);
 		MoveStrategy msS1 = new MoveStrategySinus(0, 100);
 
-		CarActor ca = new CarActor(msD1);
-		this.actors.add(ca);
+		// CarActor ca = new CarActor(msD1);
+		// this.actors.add(ca);
+		//
+		// ca = new CarActor(msU1);
+		// this.actors.add(ca);
+		//
+		// ca = new CarActor(msD2);
+		// this.actors.add(ca);
+		//
+		// ca = new CarActor(msU2);
+		// this.actors.add(ca);
 
-		ca = new CarActor(msU1);
-		this.actors.add(ca);
-
-		ca = new CarActor(msD2);
-		this.actors.add(ca);
-
-		ca = new CarActor(msU2);
-		this.actors.add(ca);
-
-		ca = new CarActor(msS1);
+		CarActor ca = new CarActor(msS1);
 		this.actors.add(ca);
 
 		MoveStrategy msS2 = new MoveStrategySinus(100, 150);
@@ -65,8 +65,14 @@ public class MyGame extends BasicGame {
 
 		PlaneActor pa = new PlaneActor(msSt1);
 		this.actors.add(pa);
+
+		MoveStrategy msU3 = new MoveStrategyUp(200, 400);
+		TemperaturActor tempA = new TemperaturActor(msU3);
+		tempA.addObserver(ta);
+		this.actors.add(tempA);
 		
 		this.actors.add(new DisplayActor());
+
 	}
 
 	@Override

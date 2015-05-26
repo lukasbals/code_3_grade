@@ -5,8 +5,9 @@ import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 
 import at.bals.games.platterns.strategy.MoveStrategy;
+import at.bals.games.platterns.strategy.MoveStrategyStop;
 
-public class TruckActor extends AActor {
+public class TruckActor extends AActor implements Observer {
 	private Image image;
 
 	public TruckActor(MoveStrategy moveStrategy) throws SlickException {
@@ -17,4 +18,12 @@ public class TruckActor extends AActor {
 	public void paint(Graphics g) {
 		g.drawImage(this.image, moveStrategy.getX(), moveStrategy.getY());
 	}
+
+	@Override
+	public void inform() {
+		// TODO Auto-generated method stub
+		this.moveStrategy = new MoveStrategyStop(this.moveStrategy.getX(),
+				this.moveStrategy.getY());
+	}
+
 }

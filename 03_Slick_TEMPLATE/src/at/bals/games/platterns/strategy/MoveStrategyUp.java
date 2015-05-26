@@ -7,10 +7,10 @@ public class MoveStrategyUp extends AbstractMoveStrategy {
 	}
 
 	public void move(int delta) {
-		this.x++;
-		if (this.x == 800) {
-			this.x = 0;
-		}
+//		this.x++;
+//		if (this.x == 800) {
+//			this.x = 0;
+//		}
 		this.y--;
 		if (this.y == 0) {
 			this.y = 600;
