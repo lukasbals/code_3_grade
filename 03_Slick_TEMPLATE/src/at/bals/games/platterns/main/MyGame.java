@@ -10,7 +10,6 @@ import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
 
 import at.bals.games.platterns.strategy.MoveStrategy;
-import at.bals.games.platterns.strategy.MoveStrategyDown;
 import at.bals.games.platterns.strategy.MoveStrategySinus;
 import at.bals.games.platterns.strategy.MoveStrategyStraight;
 import at.bals.games.platterns.strategy.MoveStrategyUp;
