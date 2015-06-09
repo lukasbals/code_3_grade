@@ -14,6 +14,7 @@ public class Teacher extends APersons {
 
 	@Override
 	public void inform() {
-		// TODO Auto-generated method stub
+		System.out.println("I am Teacher " + name + " and my Servicenumber is "
+				+ serviceNum);
 	}
 }
