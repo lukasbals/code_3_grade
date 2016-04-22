@@ -2,20 +2,19 @@ package at.bals.patterns.myGame;
 
 import org.newdawn.slick.Graphics;
 
-public class RectActor implements Actors {
-	private int x, y;
+import at.bals.patterns.moveStategy.MoveStrategy;
 
-	@Override
-	public void move() {
-		// TODO Auto-generated method stub
-		this.x++;
-		this.y++;
+public class RectActor extends AbstractActors {
+
+	public RectActor(MoveStrategy ms) {
+		super();
+		this.moveStrategy = ms;
 	}
 
 	@Override
 	public void render(Graphics g) {
 		// TODO Auto-generated method stub
-		g.drawRect(x, y, 10, 10);
+		g.drawRect(moveStrategy.getX(), moveStrategy.getY(), 10, 10);
 	}
 
 }

@@ -9,6 +9,9 @@ import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
 
+import at.bals.patterns.moveStategy.MoveStrategy;
+import at.bals.patterns.moveStategy.RightStrategy;
+
 public class MyGame extends BasicGame {
 	private List<Actors> actors;
 
@@ -28,11 +31,17 @@ public class MyGame extends BasicGame {
 	public void init(GameContainer arg0) throws SlickException {
 		// TODO Auto-generated method stub
 		this.actors = new ArrayList<Actors>();
-
+		MoveStrategy ms1 = new RightStrategy(10, 50);
+		MoveStrategy ms2 = new RightStrategy(10, 70);
+		
+		RectActor ra1 = new RectActor(ms1);
+		RectActor ra2 = new RectActor(ms2);
+		actors.add(ra1);
+		actors.add(ra2);
 	}
 
 	@Override
-	public void update(GameContainer arg0, int arg1) throws SlickException {
+	public void update(GameContainer arg0, int delta) throws SlickException {
 		// TODO Auto-generated method stub
 		for (Actors a : actors) {
 			a.move();
